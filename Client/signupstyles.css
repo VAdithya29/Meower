@@ -1,0 +1,11 @@
+.pagetitle {
+  text-align: center;
+}
+body {
+  background-color: antiquewhite;
+}
+.signupform {
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+}

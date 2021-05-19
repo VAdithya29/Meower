@@ -1,3 +1,7 @@
+body {
+  background-color: cornflowerblue;
+}
+
 .title {
   text-align: center;
 }
@@ -9,4 +13,21 @@
 
 .loading {
   text-align: center;
+}
+
+.mews {
+  text-align: center;
+  margin: 0 auto;
+  background-color: aqua;
+}
+
+.loginbutton {
+  background-color: rgb(111, 111, 221);
+  align-items: center;
+  padding: 5;
+}
+
+.lgindiv {
+  width: 50%;
+  margin: 0 auto;
 }

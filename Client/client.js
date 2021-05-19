@@ -1,19 +1,16 @@
-// const { post } = require("got");
-
-console.log("Hello!");
-
 const mewsElement = document.querySelector('.mews');
-const form = document.querySelector('form');
+const mewform = document.querySelector('.mew-form');
 const loadingElement = document.querySelector('.loading');
 API_URL = 'http://localhost:5000/mews'
+logindetails_URL = 'http://localhost:5000/signup'
 
 listAllMews();
 
 loadingElement.style.display = "";
 
-form.addEventListener('submit',(event)=>{
+mewform.addEventListener('submit',(event)=>{
     event.preventDefault();
-    const formData = new FormData(form);
+    const formData = new FormData(mewform);
     const name = formData.get('name');
     const content = formData.get('content');
     
@@ -21,7 +18,7 @@ form.addEventListener('submit',(event)=>{
         name,
         content
     };
-    form.style.display = 'none';
+    mewform.style.display = 'none';
     loadingElement.style.display = '';
 
     fetch(API_URL,{
@@ -32,8 +29,8 @@ form.addEventListener('submit',(event)=>{
         }
     }).then(response => response.json())
     .then(createdMew => {
-        form.reset();
-        form.style.display = '';
+        mewform.reset();
+        mewform.style.display = '';
         listAllMews();
         loadingElement.style.display = 'none';
     });
